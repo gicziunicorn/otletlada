@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu-HU">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,28 @@
 
 <body>
     <h1>Pollák Ötletdoboz</h1>
+
+    <div class="nevcheck">
+        <label for="nevcheck">Szeretnél adni nevet az ötletedhez broszki?</label>
+        <br>
+        <input type="checkbox" name="nevcheck" value="nevcheck" id="nevcheck">
+        <br>
+        <br>
+        <br>
+        <label for="felhnev">Név megadása:</label>
+        <br>
+        <input type="text" id="felhnev" name="felhnev" placeholder="Ide írd be a felhasználónevedet!">
+        <br>
+    </div>
+    <br>
     <div>
         <form action="send.php" method="post">
-            <textarea name="otlet" id="otlet" value="Van egy ötletem 67" 
-                cols="50" rows="6" 
+            <textarea name="otlet" id="otlet" value="Van egy ötletem 67" cols="50" rows="6"
                 placeholder="Írd ide az ötleted"></textarea>
             <button onclick="kuldes()">Küldés</button>
         </form>
     </div>
 
-</body></html>
+</body>
+
+</html>
