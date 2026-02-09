@@ -1,7 +1,8 @@
 body {
   padding: 20px;
   height: 100vh;
-  background-image: linear-gradient(to bottom, green, #00cfcf);
+  /* background-image: linear-gradient(to bottom, green, #00cfcf); */
+  background-color: #434343;
   box-sizing: border-box;
   margin: 0;
   color: white;
@@ -30,12 +31,12 @@ textarea {
 textarea:focus {
   outline: black 2px solid;
 }
-form {
+#uzenet {
   display: flex;
   flex-direction: column;
   width: fit-content;
   gap: 20px;
-  margin: auto;
+  margin: 20px auto;
 }
 button {
   width: 85px;
@@ -44,15 +45,62 @@ button {
   font-size: 16px;
   font-weight: bold;
 }
-.nevcheck {
-  text-align: center;
+#nevcheckdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 label {
   font-size: 14pt;
 }
-#felhnev {
-  color: blueviolet;
-  width: 350px;
+#felhnev,
+#felhnev-ph {
+  width: 250px;
   text-align: center;
   height: 25px;
+}
+#felhnev {
+  display: none;
+}
+#felhnev-ph {
+  opacity: 0.7;
+  text-decoration: line-through gray;
+}
+.kartya {
+  background-color: rgb(204, 178, 131);
+  display: flex;
+  margin: 0;
+  width: 350px;
+  height: 650px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 15px;
+}
+.kepek {
+  width: 50x;
+  height: 50px;
+  display: flex;
+  opacity: 0.8;
+}
+.kepek:hover {
+  opacity: 1;
+}
+
+#nevcheck {
+  height: 20px;
+  width: 20px;
+  margin-right: 20px;
+}
+
+#nevcheck:checked {
+  & + #felhnev-ph {
+    display: none;
+  }
+  & + #felhnev-ph + #felhnev {
+    display: block;
+  }
+}
+
+#uzenetkuldes {
+  height: 100vh;
 }
