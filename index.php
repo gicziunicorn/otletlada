@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="kepek/pfp.png" type="image/x-icon">
     <title>Pollák Ötletdoboz</title>
 </head>
 
@@ -27,10 +28,10 @@
     </section>
     <hr id="hr">
     <section id="otletek">
-    <!--
+        <!--
         <div class="kartya">
             <div id="kartya-adatok">
-                <p id="fnev">Felhasználónév</p>
+                <h3 id="fnev">Felhasználónév</h3>
             </div>
             <div id="bottom">
                 <img src="kepek/like.png" alt="lájk" class="kepek">
@@ -40,21 +41,21 @@
         </div>
     -->
         <?php
-            require "connect.php";
-            $cmd = $conn->prepare("SELECT * FROM ".$table);
-            $cmd->execute();
-            $result = $cmd->get_result();
-            
-            foreach ($result as $key => $value) {
-                $id = $value["id"];
-                $fnev = $value["fnev"];
-                if($fnev=="") $fnev = "Anonim"; 
-                $otlet = $value["otlet"];
-                $datum = $value["datum"];
-                $szavazatok = $value["szavazatok"];
-                $elfogadott = $value["elfogadott"];
-                echo '<div class="kartya"><div id="kartya-adatok"><p id="fnev">'.$fnev.'</p></div><p>'.$otlet.'</p><div id="bottom"><img src="kepek/like.png" alt="lájk" class="kepek"><img src="kepek/dislike.png" alt="diszlájk" class="kepek"><img src="kepek/share.png" alt="megosztás" class="kepek"></div></div>';
-            }
+        require "connect.php";
+        $cmd = $conn->prepare("SELECT * FROM " . $table);
+        $cmd->execute();
+        $result = $cmd->get_result();
+
+        foreach ($result as $key => $value) {
+            $id = $value["id"];
+            $fnev = $value["fnev"];
+            if ($fnev == "") $fnev = "Anonim";
+            $otlet = $value["otlet"];
+            $datum = $value["datum"];
+            $szavazatok = $value["szavazatok"];
+            $elfogadott = $value["elfogadott"];
+            echo '<div class="kartya"><div id="kartya-adatok"><h3 id="fnev">' . $fnev . '</h3></div><p>' . $otlet . '</p><div id="bottom"><img src="kepek/like.png" alt="lájk" class="kepek"><img src="kepek/dislike.png" alt="diszlájk" class="kepek"><img src="kepek/share.png" alt="megosztás" class="kepek"></div></div>';
+        }
         ?>
     </section>
 

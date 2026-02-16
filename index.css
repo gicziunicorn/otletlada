@@ -6,15 +6,16 @@ body {
   margin: 0;
   color: white;
 }
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   background-color: transparent;
 }
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
   background-color: black;
   border-radius: 100vw;
 }
 h1 {
-  margin-top: 0;
+  margin-top: 20px;
+  margin-bottom: -350px;
   font-weight: bold;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   text-align: center;
@@ -88,23 +89,22 @@ label {
   }
 }
 
-#nevcheck{
-  display:none;
-}
-#felhnev{
-  display: block;
-}
-#felhnev-ph{
+#nevcheck {
   display: none;
 }
-#nevcheckdiv{
+#felhnev {
+  display: block;
+}
+#felhnev-ph {
+  display: none;
+}
+#nevcheckdiv {
   display: flex;
   flex-direction: column;
-  & p{
-    margin:0;
+  & p {
+    margin: 0;
   }
 }
-
 
 #uzenetkuldes {
   height: 100vh;
@@ -116,19 +116,25 @@ label {
   align-items: center;
 }
 
-
 .kartya {
   background-color: rgb(204, 178, 131);
   display: flex;
   flex-direction: column;
   margin: 0 auto 40px;
-  width: 55vw;
-  height: 20vw;
+  width: 45vw;
+  height: 15vw;
   border: 2px solid black;
   border-radius: 10px;
   padding: 15px;
   color: black;
   font-size: 22px;
+}
+
+.kartya:hover {
+  outline: red 1px solid;
+}
+.kartya:active {
+  outline: red 1px solid;
 }
 .kepek {
   width: 30px;
@@ -140,7 +146,18 @@ label {
 .kepek:hover {
   opacity: 1;
 }
-#fnev{
+#fnev {
   font-weight: bold;
+  text-decoration: underline solid;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-
+.kartya {
+  p::before {
+    content: "· ";
+  }
+}
+#teaser {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: -200px;
+}
