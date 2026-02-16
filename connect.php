@@ -1,6 +1,4 @@
 <?php
-echo '<body style="background-color:black;color:white;">';
-
 $host = "localhost";
 $user = "root";
 $pass = "";
