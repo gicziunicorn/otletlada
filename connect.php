@@ -17,6 +17,8 @@ try {
     $_SESSION['error'] = (string) $err;
     //echo "Hiba: " . $_SESSION['error'];
     //echo '<p style="color:red;">Catched error: ' . $err . '</p>';
-    header("Location: failed.php");
+    echo "Nem sikerült csatlakozni az adatbázishoz";
+    //header("Location: failed.php");
     exit;
+
 }
